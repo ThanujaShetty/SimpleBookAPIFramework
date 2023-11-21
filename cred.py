@@ -8,6 +8,17 @@ def get_creds(custom_input_name):
     return {"customer_name" : custom_input_name,
             "customer_email" : cust_mail}
 
+def order_details(Book_id,cust_name):
+    Book_id =int(Book_id)
+    cust_name=str(cust_name).upper()
+    return {
+  "bookId": Book_id,
+  "customerName": cust_name
+}
+
+
+
 
 if __name__ == "__main__":
     print(get_creds("KRUSHNA"))
+    print(order_details(1,"chetan2"))
